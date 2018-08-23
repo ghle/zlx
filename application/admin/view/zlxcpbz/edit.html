@@ -1,0 +1,112 @@
+{extend name="template/base" /}
+{block name="content"}
+<div class="page-container">
+    <form class="form form-horizontal" id="form" method="post" action="{:\\think\\Request::instance()->baseUrl()}">
+        <input type="hidden" name="id" value="{$vo.id ?? ''}">
+
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">产品名称：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <div class="select-box">
+
+
+                    <select name="zlxcpmc" class="select">
+                        {volist name="cplb" id ="cplb"}
+                        {if  condition="$add eq 'edit'  "}
+                        {if  condition=" $vo.zlxcpmc eq $cplb.id"}
+                        <option value="{$cplb.id}" selected>{$cplb.zlxcpmc}</option>
+                        {else/}
+                        <option value="{$cplb.id}" >{$cplb.zlxcpmc}</option>
+                        {/if}
+                        {/if}
+
+                        {if  condition="$add eq ' '  "}
+                        <option value="{$cplb.id}" >{$cplb.zlxcpmc}</option>
+                        {/if}
+                        {/volist}
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+
+
+
+
+
+
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">步骤一：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="步骤一" name="zlxstep1" value="{$vo.zlxstep1 ?? ''}" >
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">步骤二：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="步骤二" name="zlxstep2" value="{$vo.zlxstep2 ?? ''}" >
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">步骤三：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="步骤三" name="zlxstep3" value="{$vo.zlxstep3 ?? ''}" >
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">步骤四：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="步骤四" name="zlxstep4" value="{$vo.zlxstep4 ?? ''}" >
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">步骤五：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="步骤五" name="zlxstep5" value="{$vo.zlxstep5 ?? ''}" >
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">步骤六：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="步骤六" name="zlxstep6" value="{$vo.zlxstep6 ?? ''}" >
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                <button type="submit" class="btn btn-primary radius">&nbsp;&nbsp;提交&nbsp;&nbsp;</button>
+                <button type="button" class="btn btn-default radius ml-20" onClick="layer_close();">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+            </div>
+        </div>
+    </form>
+</div>
+{/block}
+{block name="script"}
+<script type="text/javascript" src="__LIB__/Validform/5.3.2/Validform.min.js"></script>
+<script>
+    $(function () {
+
+
+        $('.skin-minimal input').iCheck({
+            checkboxClass: 'icheckbox-blue',
+            radioClass: 'iradio-blue',
+            increaseArea: '20%'
+        });
+
+        $("#form").Validform({
+            tiptype: 2,
+            ajaxPost: true,
+            showAllError: true,
+            callback: function (ret){
+                ajax_progress(ret);
+            }
+        });
+    })
+</script>
+{/block}

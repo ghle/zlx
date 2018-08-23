@@ -1,0 +1,11 @@
+<td><input type="checkbox" name="id[]" value="{$vo.id}"></td>
+<td>{$vo.zlxsflid}</td>
+<td>{$vo.zlxsflmc}</td>
+<td>
+    {volist name="zlxpid" id ="zlxpidf"}
+        {if condition =" $vo.zlxpid eq $zlxpidf.pid"}
+        {$zlxpidf.zlxflmc}
+        {/if}
+    {/volist}
+
+</td>
