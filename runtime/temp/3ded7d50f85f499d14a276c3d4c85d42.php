@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"D:\phpStudy\WWW\zlx\public/../application/admin\view\pub\login.html";i:1535207146;}*/ ?>
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
@@ -19,15 +20,15 @@
     <script type="text/javascript" src="__LIB__/DD_belatedPNG_0.0.8a-min.js" ></script>
     <script>DD_belatedPNG.fix('*');</script>
     <![endif]-->
-    <title>后台登录 - {$Think.config.site.title}</title>
-    <meta name="keywords" content="{$Think.config.site.keywords}">
-    <meta name="description" content="{$Think.config.site.keywords}">
+    <title>后台登录 - <?php echo \think\Config::get('site.title'); ?></title>
+    <meta name="keywords" content="<?php echo \think\Config::get('site.keywords'); ?>">
+    <meta name="description" content="<?php echo \think\Config::get('site.keywords'); ?>">
 </head>
 <body>
 
 <div class="loginWraper">
     <div id="loginform" class="loginBox">
-        <form class="form form-horizontal" action="{:\\think\\Url::build('checkLogin')}" method="post" id="form">
+        <form class="form form-horizontal" action="<?php echo \think\Url::build('checkLogin'); ?>" method="post" id="form">
             <div class="row cl">
                 <label class="form-label col-xs-3 col-ms-3" style="line-height: 36px;font-size: 20px;">帐号</label>
                 <div class="formControls col-xs-6 col-ms-6">
@@ -45,7 +46,7 @@
             <div class="row cl">
                 <div class="formControls col-xs-6 col-ms-6 col-xs-offset-3 col-ms-offset-3">
                     <input name="captcha" class="input-text size-L" type="text" placeholder="验证码" style="width:100px;min-width: auto" datatype="*" nullmsg="请填写验证码">
-                    <img id="captcha" src="{:captcha_src()}" alt="验证码" title="点击刷新验证码" style="cursor:pointer;width: 150px;height: 40px">
+                    <img id="captcha" src="<?php echo captcha_src(); ?>" alt="验证码" title="点击刷新验证码" style="cursor:pointer;width: 150px;height: 40px">
                 </div>
                 <div class="col-xs-3 col-ms-3"></div>
             </div>
@@ -66,7 +67,7 @@
 <script>
     $(function () {
         $("#captcha").click(function () {
-            $(this).attr("src","{:captcha_src()}?t="+new Date().getTime())
+            $(this).attr("src","<?php echo captcha_src(); ?>?t="+new Date().getTime())
         });
 
         $("#form").Validform({
@@ -85,7 +86,7 @@
                     }
                 } else {
                     layer.msg("登录成功！");
-                    location.href = '{$Request.get.callback ?: \\think\\Url::build("Index/index")}';
+                    location.href = '<?php echo \think\Request::instance()->get('callback')?: \think\Url::build("Index/index"); ?>';
 
                 }
             }

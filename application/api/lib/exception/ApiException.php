@@ -6,14 +6,14 @@
  * Time: 22:28
  */
 
-namespace app\api\lib;
+namespace app\api\lib\exception;
 
 use think\Exception;
 class ApiException extends  Exception
 {
-    protected  $message='';
-    protected  $code =0;
-    protected  $httpCode=500;
+    public $message='';
+    public  $code =0;
+    public  $httpCode=500;
 
     public  function  __construct($message='',$httpCode=0,$code=0)
     {

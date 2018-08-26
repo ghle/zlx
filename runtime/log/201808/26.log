@@ -1,0 +1,257 @@
+[ 2018-08-26T08:55:45+08:00 ] ::1 ::1 GET /zlx/public/index.php/api/Index/zlxlbt
+[ log ] localhost/zlx/public/index.php/api/Index/zlxlbt [运行时间：0.050827s][吞吐率：19.67req/s] [内存消耗：1,791.11kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpStudy\WWW\zlx\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Index',
+    2 => 'zlxlbt',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx3f947522b050eb99/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1808101 MicroMessenger/6.5.7 Language/zh_CN webview/ token/09ada693bd15dfe9db8c20047e6bb9d6',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Index->zlxlbt[ D:\phpStudy\WWW\zlx\application\api\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001534s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_zlxbanner` [ RunTime:0.013071s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_zlxbanner` ORDER BY id asc LIMIT 3 [ RunTime:0.000498s ]
+
+---------------------------------------------------------------
+----------------------------------
+[ 2018-08-26T08:55:54+08:00 ] ::1 ::1 GET /zlx/public/index.php/api/Index/zlxsfl
+[ log ] localhost/zlx/public/index.php/api/Index/zlxsfl [运行时间：0.055471s][吞吐率：18.03req/s] [内存消耗：1,795.77kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpStudy\WWW\zlx\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Index',
+    2 => 'zlxsfl',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx3f947522b050eb99/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1808101 MicroMessenger/6.5.7 Language/zh_CN webview/ token/09ada693bd15dfe9db8c20047e6bb9d6',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Index->zlxsfl[ D:\phpStudy\WWW\zlx\application\api\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001422s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_zlxsfl` [ RunTime:0.011788s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_zlxsfl` ORDER BY id desc [ RunTime:0.000479s ]
+
+---------------------------------------------------------------
+[ 2018-08-26T08:55:55+08:00 ] ::1 ::1 POST /zlx/public/index.php/api/index/zlxsearch
+[ log ] localhost/zlx/public/index.php/api/index/zlxsearch [运行时间：0.051780s][吞吐率：19.31req/s] [内存消耗：1,798.43kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpStudy\WWW\zlx\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'zlxsearch',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx3f947522b050eb99/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1808101 MicroMessenger/6.5.7 Language/zh_CN webview/ token/09ada693bd15dfe9db8c20047e6bb9d6',
+  'origin' => 'http://127.0.0.1:25418',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'content-length' => '17',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'zlxcpmc' => '鸡',
+)
+[ info ] [ RUN ] app\api\controller\Index->zlxsearch[ D:\phpStudy\WWW\zlx\application\api\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002915s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_zlxcplb` [ RunTime:0.008973s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_zlxcplb` WHERE  `zlxcpmc` LIKE '%鸡%'  AND `status` = 1  AND `isdelete` = 0 [ RunTime:0.000509s ]
+
+---------------------------------------------------------------
+[ 2018-08-26T08:55:57+08:00 ] ::1 ::1 POST /zlx/public/index.php/api/index/zlxxqy
+[ log ] localhost/zlx/public/index.php/api/index/zlxxqy [运行时间：0.084800s][吞吐率：11.79req/s] [内存消耗：1,849.34kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpStudy\WWW\zlx\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'zlxxqy',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx3f947522b050eb99/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1808101 MicroMessenger/6.5.7 Language/zh_CN webview/ token/09ada693bd15dfe9db8c20047e6bb9d6',
+  'origin' => 'http://127.0.0.1:25418',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'content-length' => '10',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+)
+[ info ] [ RUN ] app\api\controller\Index->zlxxqy[ D:\phpStudy\WWW\zlx\application\api\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001117s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_zlxcplb` [ RunTime:0.009428s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_zlxcplb` WHERE  `id` = 2 [ RunTime:0.000510s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000695s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_zlxcpbz` [ RunTime:0.011456s ]
+[ sql ] [ SQL ] SELECT `zlxstep1`,`zlxstep2`,`zlxstep3`,`zlxstep4`,`zlxstep5` FROM `tp_zlxcpbz` WHERE  `zlxcpmc` = '2' [ RunTime:0.000450s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011697s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_zlxscgl` [ RunTime:0.009556s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_zlxscgl` WHERE  `zlxcpmc` = '2' [ RunTime:0.000536s ]
+
+---------------------------------------------------------------
+[ 2018-08-26T08:56:03+08:00 ] ::1 ::1 POST /zlx/public/index.php/api/index/zlxxqy
+[ log ] localhost/zlx/public/index.php/api/index/zlxxqy [运行时间：0.076717s][吞吐率：13.03req/s] [内存消耗：1,850.43kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpStudy\WWW\zlx\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'zlxxqy',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx3f947522b050eb99/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1808101 MicroMessenger/6.5.7 Language/zh_CN webview/ token/09ada693bd15dfe9db8c20047e6bb9d6',
+  'origin' => 'http://127.0.0.1:25418',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'content-length' => '10',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Index->zlxxqy[ D:\phpStudy\WWW\zlx\application\api\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001994s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_zlxcplb` [ RunTime:0.013482s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_zlxcplb` WHERE  `id` = 1 [ RunTime:0.000547s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000717s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_zlxcpbz` [ RunTime:0.008754s ]
+[ sql ] [ SQL ] SELECT `zlxstep1`,`zlxstep2`,`zlxstep3`,`zlxstep4`,`zlxstep5` FROM `tp_zlxcpbz` WHERE  `zlxcpmc` = '1' [ RunTime:0.000335s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000683s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_zlxscgl` [ RunTime:0.006723s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_zlxscgl` WHERE  `zlxcpmc` = '1' [ RunTime:0.000801s ]
+
+---------------------------------------------------------------
+[ 2018-08-26T09:01:13+08:00 ] ::1 ::1 GET /zlx/public/index.php/api/Index/zlxlbt
+[ log ] localhost/zlx/public/index.php/api/Index/zlxlbt [运行时间：0.062480s][吞吐率：16.01req/s] [内存消耗：1,791.08kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpStudy\WWW\zlx\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Index',
+    2 => 'zlxlbt',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx3f947522b050eb99/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1808101 MicroMessenger/6.5.7 Language/zh_CN webview/ token/1eed4df70f128017a5882fbeaca4d7b4',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Index->zlxlbt[ D:\phpStudy\WWW\zlx\application\api\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001292s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_zlxbanner` [ RunTime:0.011466s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_zlxbanner` ORDER BY id asc LIMIT 3 [ RunTime:0.000603s ]
+
+---------------------------------------------------------------
+[ 2018-08-26T09:01:13+08:00 ] ::1 ::1 GET /zlx/public/index.php/api/Index/zlxtjw
+[ log ] localhost/zlx/public/index.php/api/Index/zlxtjw [运行时间：0.078201s][吞吐率：12.79req/s] [内存消耗：1,798.65kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpStudy\WWW\zlx\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Index',
+    2 => 'zlxtjw',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://servicewechat.com/wx3f947522b050eb99/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1808101 MicroMessenger/6.5.7 Language/zh_CN webview/ token/1eed4df70f128017a5882fbeaca4d7b4',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Index->zlxtjw[ D:\phpStudy\WWW\zlx\application\api\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001349s ] mysql:dbname=tpadmin;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_zlxcplb` [ RunTime:0.010319s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_zlxcplb` WHERE  `status` = 1  AND `isdelete` = 0 ORDER BY id asc LIMIT 6 [ RunTime:0.000370s ]
+
+---------------------------------------------------------------

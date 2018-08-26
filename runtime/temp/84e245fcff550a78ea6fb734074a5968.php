@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:69:"D:\phpStudy\WWW\zlx\public/../application/admin\view\zlxsfl\edit.html";i:1534995447;s:71:"D:\phpStudy\WWW\zlx\public/../application/admin\view\template\base.html";i:1488957233;s:82:"D:\phpStudy\WWW\zlx\public/../application/admin\view\template\javascript_vars.html";i:1488957233;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:70:"D:\phpStudy\WWW\zlx\public/../application/admin\view\zlxcpbz\edit.html";i:1534993733;s:71:"D:\phpStudy\WWW\zlx\public/../application/admin\view\template\base.html";i:1488957233;s:82:"D:\phpStudy\WWW\zlx\public/../application/admin\view\template\javascript_vars.html";i:1488957233;}*/ ?>
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
@@ -47,37 +47,71 @@
 <div class="page-container">
     <form class="form form-horizontal" id="form" method="post" action="<?php echo \think\Request::instance()->baseUrl(); ?>">
         <input type="hidden" name="id" value="<?php echo isset($vo['id']) ? $vo['id'] :  ''; ?>">
+
         <div class="row cl">
-            <label class="form-label col-xs-3 col-sm-3">子级分类id：</label>
-            <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" placeholder="子级分类id" name="zlxsflid" value="<?php echo isset($vo['zlxsflid']) ? $vo['zlxsflid'] :  ''; ?>" >
-            </div>
-            <div class="col-xs-3 col-sm-3"></div>
-        </div>
-        <div class="row cl">
-            <label class="form-label col-xs-3 col-sm-3">子级分类名称：</label>
-            <div class="formControls col-xs-6 col-sm-6">
-                <input type="text" class="input-text" placeholder="子级分类名称" name="zlxsflmc" value="<?php echo isset($vo['zlxsflmc']) ? $vo['zlxsflmc'] :  ''; ?>" >
-            </div>
-            <div class="col-xs-3 col-sm-3"></div>
-        </div>
-        <div class="row cl">
-            <label class="form-label col-xs-3 col-sm-3">父级分类：</label>
+            <label class="form-label col-xs-3 col-sm-3">产品名称：</label>
             <div class="formControls col-xs-6 col-sm-6">
                 <div class="select-box">
 
 
-                        <select name="zlxpid" class="select">
-                            <?php if(is_array($zlxpid) || $zlxpid instanceof \think\Collection || $zlxpid instanceof \think\Paginator): $i = 0; $__LIST__ = $zlxpid;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$zlxpids): $mod = ($i % 2 );++$i;if($add == 'edit'): if($vo['zlxpid'] == $zlxpids['pid']): ?>
-                                    <option value="<?php echo $zlxpids['pid']; ?>" selected><?php echo $zlxpids['zlxflmc']; ?></option>
-                                <?php else: ?>
-                                     <option value="<?php echo $zlxpids['pid']; ?>" ><?php echo $zlxpids['zlxflmc']; ?></option>
-                                <?php endif; endif; if($add == ' '): ?>
-                                 <option value="<?php echo $zlxpids['pid']; ?>" ><?php echo $zlxpids['zlxflmc']; ?></option>
-                            <?php endif; endforeach; endif; else: echo "" ;endif; ?>
-                        </select>
-
+                    <select name="zlxcpmc" class="select">
+                        <?php if(is_array($cplb) || $cplb instanceof \think\Collection || $cplb instanceof \think\Paginator): $i = 0; $__LIST__ = $cplb;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cplb): $mod = ($i % 2 );++$i;if($add == 'edit'): if($vo['zlxcpmc'] == $cplb['id']): ?>
+                        <option value="<?php echo $cplb['id']; ?>" selected><?php echo $cplb['zlxcpmc']; ?></option>
+                        <?php else: ?>
+                        <option value="<?php echo $cplb['id']; ?>" ><?php echo $cplb['zlxcpmc']; ?></option>
+                        <?php endif; endif; if($add == ' '): ?>
+                        <option value="<?php echo $cplb['id']; ?>" ><?php echo $cplb['zlxcpmc']; ?></option>
+                        <?php endif; endforeach; endif; else: echo "" ;endif; ?>
+                    </select>
                 </div>
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+
+
+
+
+
+
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">步骤一：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="步骤一" name="zlxstep1" value="<?php echo isset($vo['zlxstep1']) ? $vo['zlxstep1'] :  ''; ?>" >
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">步骤二：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="步骤二" name="zlxstep2" value="<?php echo isset($vo['zlxstep2']) ? $vo['zlxstep2'] :  ''; ?>" >
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">步骤三：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="步骤三" name="zlxstep3" value="<?php echo isset($vo['zlxstep3']) ? $vo['zlxstep3'] :  ''; ?>" >
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">步骤四：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="步骤四" name="zlxstep4" value="<?php echo isset($vo['zlxstep4']) ? $vo['zlxstep4'] :  ''; ?>" >
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">步骤五：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="步骤五" name="zlxstep5" value="<?php echo isset($vo['zlxstep5']) ? $vo['zlxstep5'] :  ''; ?>" >
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">步骤六：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="步骤六" name="zlxstep6" value="<?php echo isset($vo['zlxstep6']) ? $vo['zlxstep6'] :  ''; ?>" >
             </div>
             <div class="col-xs-3 col-sm-3"></div>
         </div>
@@ -101,7 +135,7 @@
 <script type="text/javascript" src="__LIB__/Validform/5.3.2/Validform.min.js"></script>
 <script>
     $(function () {
-        $("[name='zlxpid']").find("[value='<?php echo isset($vo['zlxpid']) ? $vo['zlxpid'] :  ''; ?>']").attr("selected", true);
+
 
         $('.skin-minimal input').iCheck({
             checkboxClass: 'icheckbox-blue',
